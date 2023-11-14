@@ -16,3 +16,5 @@ jobs:
     - uses: actions/checkout@v3
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag javaapp:v1
+    - name: Test Docker Image
+      run: docker run -d -p 8080:8080 javaapp:v1
