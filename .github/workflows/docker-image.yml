@@ -19,4 +19,4 @@ jobs:
     - name: Test Docker Image
       run: docker run -d -p 8080:8080 javaapp:v1
     - name: Test my java Application
-      run: curl -Is http://www.google.com | head -n 1
+      run: curl -Is http://localhost:8080 | head -n 1
