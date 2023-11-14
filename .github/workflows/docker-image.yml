@@ -18,3 +18,5 @@ jobs:
       run: docker build . --file Dockerfile --tag javaapp:v1
     - name: Test Docker Image
       run: docker run -d -p 8080:8080 javaapp:v1
+    - name: Test my java Application
+      run: curl localhost:8080
