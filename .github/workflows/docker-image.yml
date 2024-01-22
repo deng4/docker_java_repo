@@ -19,8 +19,4 @@ jobs:
     - name: Test Docker Image
       run: docker run -d -p 8080:8080 javaapp:v1
     - name: Test my java Application
-      uses: jtalk/url-health-check-action@v3
-      with:
-        url: localhost:8080
-        max-attempts: 3
-        retry-delay: 5s
+      run: curl -Is http://localhost:8080 | head -n 1
